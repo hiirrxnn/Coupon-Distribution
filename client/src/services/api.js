@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL = process.env.NODE_ENV === 'production' 
   ? '/api'
-  : 'http://localhost:3001/api';
+  : 'https://coupon-distribution-8u9d.onrender.com';
 
 const api = axios.create({
   baseURL: API_URL,
