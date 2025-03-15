@@ -2,6 +2,20 @@
 
 A full-stack MERN (MongoDB, Express.js, React.js, Node.js) application for distributing coupons to guest users in a round-robin manner with admin management and abuse prevention.
 
+## Screenshots
+
+### Dashboard
+![Dashboard](client/public/Dashboard.png)
+
+### Admin Dashboard
+![Admin Dashboard](client/public/AdminDashboard.png)
+
+### Coupons Management
+![Coupons Management](client/public/Coupons.png)
+
+### IP-Based Tracking
+![IP-Based Tracking](client/public/IPBasedTracking.png)
+
 ## Features
 
 ### User-Facing Features
@@ -112,11 +126,3 @@ A full-stack MERN (MongoDB, Express.js, React.js, Node.js) application for distr
 1. Navigate to `/login` and enter admin credentials
 2. Use the dashboard to manage coupons and view claim history
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgements
-- React.js team for the frontend library
-- MongoDB team for the database
-- Node.js and Express.js teams for the backend framework# Coupon-Distribution
