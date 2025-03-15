@@ -8,13 +8,13 @@ A full-stack MERN (MongoDB, Express.js, React.js, Node.js) application for distr
 ![Dashboard](client/public/Dashboard.png)
 
 ### Admin Dashboard
-![Admin Dashboard](client/public/AdminDashboard.png)
+![Admin Dashboard](client/public/Admin.png)
 
 ### Coupons Management
 ![Coupons Management](client/public/Coupons.png)
 
 ### IP-Based Tracking
-![IP-Based Tracking](client/public/IPBasedTracking.png)
+![IP-Based Tracking](client/public/IP.png)
 
 ## Features
 
