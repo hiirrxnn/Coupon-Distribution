@@ -15,7 +15,7 @@ connectDB();
 app.use(express.json({ extended: false }));
 app.use(cookieParser(config.get('cookieSecret')));
 app.use(cors({
-  origin: '*', // Allow requests from any origin for now
+  origin: ['https://coupon-dist-by-hiren.netlify.app', 'http://localhost:3000'],// Allow requests from any origin for now
   credentials: true
 }));
 
