@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const API_URL = process.env.NODE_ENV === 'production' 
-  ? '/api'
-  : 'https://coupon-distribution-8u9d.onrender.com';
+  ? 'https://coupon-distribution-yhlc.onrender.com/api'
+  : 'http://localhost:3001/api';
 
 const api = axios.create({
   baseURL: API_URL,
