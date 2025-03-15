@@ -15,27 +15,20 @@ connectDB();
 app.use(express.json({ extended: false }));
 app.use(cookieParser(config.get('cookieSecret')));
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? 'https://yourdomain.com' : 'http://localhost:3000',
+  origin: '*', // Allow requests from any origin for now
   credentials: true
 }));
 
 // Trust first proxy for IP detection
 app.set('trust proxy', 1);
 
-// Define Routes
-app.use('/', require('./routes/index'));
-// In server.js
-app.use(express.json({ extended: false }));
+// Define API Routes - make sure these are prefixed with /api
+app.use('/api', require('./routes/index'));
 
-// Serve static assets in production
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static(path.join(__dirname, '../client/build')));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
-  });
-}
+// For API-only deployment, don't try to serve static files
+app.get('*', (req, res) => {
+  res.status(404).json({ message: 'API endpoint not found' });
+});
 
 const PORT = process.env.PORT || 3001;
 
